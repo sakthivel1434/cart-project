@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart design</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <span class="header">YAY! it's BOGO</span>
+    <div class="width listitem">
+      <div class="flex-top">
+        <div class="flex-right">
+          <input type="radio" />
+          <span>1 Unit</span>
+          <button class="card-color">10% Off</button>
+        </div>
+        <div>
+          <span>$18.00% USD</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-topper">$24.00 USD</span>
+      </div>
+
+      <div class="detailbox">
+        <div>
+          <span class="font">Size</span>
+          <span class="font-v">Colour</span>
+        </div>
+        <div class="middle">
+          <span className="number">#1</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Colour</option>
+            <option value="Pink">Pink</option>
+          </select>
+        </div>
+        <div class="middle">
+          <span class="number">#2</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Black</option>
+            <option value="Pink">Colour</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="width listitem">
+      <span class="top">MOST POPULAR</span>
+      <div class="flex-top">
+        <div class="flex-right">
+          <input type="radio" />
+          <span>2 Unit</span>
+          <button class="card-color">20% Off</button>
+        </div>
+        <div>
+          <span>$18.00% USD</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-topper">$24.00 USD</span>
+      </div>
+      <div class="detailbox">
+        <div>
+          <span class="font">Size</span>
+          <span class="font-v">Colour</span>
+        </div>
+        <div class="middle">
+          <span className="number">#1</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Colour</option>
+            <option value="Pink">Pink</option>
+          </select>
+        </div>
+        <div class="middle">
+          <span class="number">#2</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Black</option>
+            <option value="Pink">Colour</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="width listitem">
+      <div class="flex-top">
+        <div class="flex-right">
+          <input type="radio" />
+          <span>3 Unit</span>
+          <button class="card-color">30% Off</button>
+        </div>
+        <div>
+          <span>$10.00% USD</span>
+        </div>
+      </div>
+      <div>
+        <span class="font-topper">$24.00 USD</span>
+      </div>
+
+      <div class="detailbox">
+        <div>
+          <span class="font">Size</span>
+          <span class="font">Colour</span>
+        </div>
+        <div class="middle">
+          <span className="number">#1</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Colour</option>
+            <option value="Pink">Pink</option>
+          </select>
+        </div>
+        <div class="middle">
+          <span class="number">#2</span>
+          <select>
+            <option class="letter" value="S">S</option>
+            <option value="R">R</option>
+          </select>
+          <select class="middle-gap">
+            <option value="Colour">Black</option>
+            <option value="Pink">Colour</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="flex">
+      <span class="font-small">Free Delivery</span>
+      <span className="font-smaller">Total:$18.00 USD</span>
+    </div>
+    <div>
+      <button class="cart-button">+ Add to Cart</button>
+    </div>
+    <div>
+      <span class="size">@Powered by Pumper</span>
+    </div>
+
+    <script>
+      // Select all list items
+      const listItems = document.getElementsByClassName("listitem");
+      const elementsArray = Array.from(listItems);
+
+      elementsArray.forEach((item) => {
+        // Add event listeners for mouseover and mouseout
+        item.addEventListener("mouseover", function () {
+          const detailbox = this.querySelector(".detailbox");
+          if (detailbox) detailbox.style.display = "block";
+        });
+
+        item.addEventListener("mouseout", function () {
+          const detailbox = this.querySelector(".detailbox");
+          if (detailbox) detailbox.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>
